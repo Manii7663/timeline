@@ -1,0 +1,261 @@
+/*
+    DEMO STYLE
+*/
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+body {
+  background: #fafafa;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+
+
+
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+  display: flex;
+  width: 10%;
+  align-items: stretch;
+}
+
+#sidebar {
+  position: fixed;
+  width: 180px;
+  background: linear-gradient(rgba(21, 13, 107, 0.9) 1.1%, rgba(188, 16, 80, 0.9) 130.5%);
+  /* background: linear-gradient(rgb(21, 13, 107) 1.1%, rgb(188, 16, 80) 130.5%); */
+  color: #fff;
+  transition: all 0.3s;
+  height: 100%;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: linear-gradient(rgb(21, 13, 107) 1.1%, rgb(188, 16, 80) 130.5%);
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding-left: 10px;
+}
+
+#sidebar ul li a {
+  padding-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 80%;
+  padding-left: 15px;
+  font-size: small;
+  display: block;
+}
+
+#sidebar ul li a:hover {
+  color: #7386D5;
+  background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #6d7fcc;
+}
+
+.bottom-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* Occupy the full width of the sidebar */
+
+  /* Adjust the padding as needed */
+  margin-bottom: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  margin-left: 10px;
+}
+
+
+
+.line {
+  background: linear-gradient(rgba(21, 13, 107, 0.9) 1.1%, rgba(188, 16, 80, 0.7) 50%, rgba(188, 16, 80, 0.5) 80%, rgba(188, 16, 80, 0.3) 100%);
+
+  /* Add a faded white horizontal line */
+  position: relative;
+}
+
+.line::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, white, transparent);
+  transform: translateY(-50%);
+}
+
+#line {
+  color: white;
+}
+
+.bottom-content i {
+  margin-left: 80px;
+  
+}
+
+.w-100 {
+  margin-left: 3px;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+.Maincontent {
+
+  width: 85%;
+  position: absolute;
+  top: 0;
+  /* Align top */
+  right: 0;
+  /* Align right */
+
+}
+
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+body h1 {
+  font-family: "Arial" !important;
+  color: #19105B;
+}
+
+/* ---------------------------------------------------
+    timesheet content
+----------------------------------------------------- */
+
+.Banner {
+  display: flex;
+  justify-content: space-between;
+ 
+  place-items: center;
+  align-items: center;
+  font-size: small;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 3px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  height: 40px;
+}
+
+thead {
+  background-color: #FFE5EE;
+}
+
+.Table {
+  margin-left: 0px;
+  padding-left: 0;
+}
+
+.Table thead td {
+  color: #19105B;
+  font-size: small;
+  font-weight: 700;
+  text-align: left;
+
+
+}
+
+.Table tbody tr {
+  color: #6a6c71;
+  padding: 10px;
+  text-align: left;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+
+  #sidebar.active {
+    margin-left: 0;
+  }
+
+  #sidebarCollapse span {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------------
+    Navbar
+----------------------------------------------------- */
+
+.navbar {
+  margin-top: 60px;
+}

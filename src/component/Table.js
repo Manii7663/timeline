@@ -12,11 +12,11 @@ function Table({ settime }) {
       comment: " ",
       Mon: 0,
       Tue: 0,
-      wed: 0,
+      Wed: 0,
       Thur: 0,
-      fri: 0,
-      sat: 0,
-      sun: 0,
+      Fri: 0,
+      Sat: 0,
+      Sun: 0,
     },
   ]);
 
@@ -28,11 +28,11 @@ function Table({ settime }) {
   };
   
   const [Sum, setSum] = useState([
-    { id: 0, Mon: 0, Tue: 0, wed: 0, Thur: 0, fri: 0, sat: 0, sun: 0 },
+    { id: 0, Mon: 0, Tue: 0, Wed: 0, Thur: 0, Fri: 0, Sat: 0, Sun: 0 },
   ]);
 
   const [daysdata, setDaysdata] = useState([
-    { id: 0, Mon: 0, Tue: 0, wed: 0, Thur: 0, fri: 0, sat: 0, sun: 0 },
+    { id: 0, Mon: 0, Tue: 0, Wed: 0, Thur: 0, Fri: 0, Sat: 0, Sun: 0 },
   ]);
 
   const [data, setData] = useState([{ id: 0 }]);
@@ -128,7 +128,8 @@ function Table({ settime }) {
                 <p style={{ fontWeight: "500" }}>08</p>
               </td>
               <td>
-                <p style={{ margin: 0 }}>Fri</p>
+                <p style={{ margin: 0 }}>Fri
+        </p>
                 <p style={{ fontWeight: "500" }}>09</p>
               </td>
               <td>
@@ -159,7 +160,8 @@ function Table({ settime }) {
                 <td>
                   <input style={{ width: "50px", border: "none" }}></input>
                 </td>
-                {["Mon", "Tue", "wed", "Thur", "fri", "sat", "sun"].map(
+                {["Mon", "Tue", "Wed", "Thur", "Fri",
+        "Sat", "Sun"].map(
                   (days) => (
                     <td>
                       <input
@@ -213,7 +215,7 @@ function Table({ settime }) {
                 <td>
                   <input style={{ width: "50px", border: "none" }}></input>
                 </td>
-                {["Mon", "Tue", "wed", "Thur", "fri", "sat", "sun"].map(
+                {["Mon", "Tue", "Wed", "Thur", "Fri","Sat", "Sun"].map(
                   (days) => (
                     <td>
                       <input
@@ -258,11 +260,12 @@ function Table({ settime }) {
               <td></td>
               <td>{Sum.Mon}</td>
               <td>{Sum.Tue}</td>
-              <td>{Sum.wed}</td>
+              <td>{Sum.Wed}</td>
               <td>{Sum.Thur}</td>
-              <td>{Sum.fri}</td>
-              <td>{Sum.sat}</td>
-              <td>{Sum.sun}</td>
+              <td>{Sum.Fri
+      }</td>
+              <td>{Sum.Sat}</td>
+              <td>{Sum.Sun}</td>
               <td>{total}</td>
             </tr>
             <tr>
